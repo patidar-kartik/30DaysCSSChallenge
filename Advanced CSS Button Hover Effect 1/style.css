@@ -1,0 +1,43 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    background-color: #212121;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+}
+button{
+    font-family: 'Roboto', Arial, sans-serif;
+    padding: 0px 40px;
+    line-height: 2.7em;
+    border: 3px solid white;
+    background-color: #212121;
+    color: white;
+    border-radius: 15px 0px 15px 15px;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    position: relative;
+}
+button:hover{
+    border: 3px solid #C87F0A;
+    transition: 0.3s;
+}
+
+button::before{
+    content: "";
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    right: -3px;
+    top: -3px;
+    border-right: 35px solid #C87F0A;
+    border-bottom: 35px solid transparent;
+    z-index: 1;
+}
