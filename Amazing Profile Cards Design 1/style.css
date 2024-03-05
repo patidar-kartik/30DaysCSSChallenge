@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.box{
+    max-width: 315px;
+    height:110px;
+    background-color: #fff;
+    width: 100%;
+    min-width: 230px;
+    position: relative;
+    border-radius: 5px;
+}
+.right-box{
+    padding: 15px;
+    animation-name: transup;
+    animation-duration: 1.6s;
+    animation-iteration-count: 1;
+}
+.right-box h3{
+    font-size: 1.1em;
+    font-weight: normal;
+}
+.icon a{
+    text-decoration:none ;
+    color: rgba(0, 0, 0, 0.73);
+}
+
+.icon a i{
+    font-size: 1.6rem;
+    color: #ccc;
+}
+
+.left-box{
+}
+
+.left-box img{
+    height: 110px;
+    width: 110px; 
+    position: absolute;
+    top: -20px;
+    right: 10px;
+    border-radius: 5px;
+    animation-name: transup;
+    animation-duration: 1.6s;
+    animation-iteration-count: 1;
+
+}
+
+@keyframes transup {
+    0%{
+        transform: translateY(40px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.icon a i:hover{
+    color: rgba(0, 0, 255, 0.541);
+}
