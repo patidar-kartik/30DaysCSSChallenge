@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #212121;
+}
+
+.continer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    max-height: 100%;
+}
+
+.img-box{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding:20px;
+}
+
+.box{
+    height: 230px;
+    width: 315px;
+    position: relative;
+    overflow: hidden;
+}
+
+.box img{
+    height: 230px;
+    width: 315px;   
+}
+
+.box::after{
+    content: "";
+    position: absolute;
+    height: 200%;
+    width: 100%;
+    background-color: #000000;
+    top: -220px;
+    right: -400px;
+    transform: rotate(-40deg);
+    transition: all 2s;
+    border: 2px solid #fff;
+}
+
+.box:hover::after{
+    right: -40%;
+    bottom: 0;
+    transform: translateX(1px) rotate(-45deg);
+    z-index: 1;
+}
+
+.box::before{
+    content: "";
+    position: absolute;
+    height: 200%;
+    width: 100%;
+    background-color: #000000;
+    top: 220px;
+    left: -400px;
+    transform: rotate(-40deg);
+    transition: all 2s;
+    border: 2px solid #fff;
+}
+
+.box:hover::before{
+    left: -40%;
+    top: 0;
+    transform: translateX(1px) rotate(-45deg);
+    z-index: 1;
+}
+
+.button{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box button{
+    padding: 5px 10px;
+    background-color: #000000;
+    border: 2px solid #fff;
+    font-size: 1em;
+    letter-spacing: 1px;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0;
+    transition: all 0.8s;
+    scale: 1;
+}
+.box:hover button{
+   opacity: 1;
+   transition: all 0.8s;
+   scale: 1.2;
+   z-index: 2;
+}
