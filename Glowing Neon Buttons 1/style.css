@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #050801;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    font-weight: bold;
+    padding: 2rem;
+    font-family:  'Raleway', sans-serif;
+}
+
+a{
+    position: relative;
+    padding: 20px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: 4px;
+    transition: 0.8s;
+    border: none;
+}
+
+#neno-1{
+    color: #7EDD03;
+}
+
+#neno-1:hover{
+    background:#7EDD03;
+    box-shadow: 2px 2px 10px 10px #7EDD03,0px 0px 200px 20px #7EDD03;
+    color: #050801;
+}
+
+#neno-2{
+    color: #FF86FF;
+}
+
+#neno-2:hover{
+    background-color: #FF86FF;
+    box-shadow: 2px 2px 10px 10px #FF86FF,0px 0px 200px 20px #FF86FF;
+    color:#050801;
+}
+
+#neno-3{
+    color: #03E9F4;
+}
+
+#neno-3:hover{
+    background-color: #03E9F4;
+    color:#050801;
+    box-shadow: 2px 2px 10px 10px #03E9F4,0px 0px 200px 20px #03E9F4;
+}
+span{
+    position: absolute;
+ }
+#neno-1 .top{
+    left: -100%;
+    top: 0;
+    height: 2px;
+    width:100%;
+    background-color: #7EDD03;
+}
+#neno-1 .right{
+    right: 0;
+    top: -100%;
+    height: 100%;
+    width:2px;
+    background-color: #7EDD03;
+}
+#neno-1 .bottom{
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    width:100%;
+    background-color: #7EDD03;
+}
+
+#neno-1 .left{
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width:2px;
+    background-color: #7EDD03;
+}
+#neno-2 .top{
+    left: -100%;
+    top: 0;
+    height: 2px;
+    width:100%;
+    background-color: #FF86FF;
+}
+#neno-2 .right{
+    right: 0;
+    top: -100%;
+    height: 100%;
+    width:2px;
+    background-color: #FF86FF;
+}
+#neno-2 .bottom{
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    width:100%;
+    background-color: #FF86FF;
+}
+
+#neno-2 .left{
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width:2px;
+    background-color: #FF86FF;
+}
+#neno-3 .top{
+    left: -100%;
+    top: 0;
+    height: 2px;
+    width:100%;
+    background-color: #03E9F4;
+}
+#neno-3 .right{
+    right: 0;
+    top: -100%;
+    height: 100%;
+    width:2px;
+    background-color: #03E9F4;
+}
+#neno-3 .bottom{
+    right: 0;
+    bottom: 0%;
+    height: 2px;
+    width:100%;
+    background-color: #03E9F4;
+}
+
+#neno-3 .left{
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width:2px;
+    background-color: #03E9F4;
+}
+
+.top{
+    animation: top 1s linear infinite;
+}
+@keyframes top{
+    0%{
+        left: -100%;
+    }
+    50%{
+        left: 100%;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+.right{
+    animation: right 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes right{
+    0%{
+        right: 0;
+        top: -100%;
+    }
+    50%{
+        right: 0;
+        top: 100%;
+    }
+    100%{
+        right: 0;
+        top:100%;
+    }
+}
+
+.bottom{
+    animation: bottom 1s linear infinite;
+    animation-delay: 0.50s;
+}
+@keyframes bottom{
+    0%{
+        right: -100%;
+        bottom: 0;
+    }
+    50%{
+        right: 100%;
+        bottom: 0%;
+    }
+    100%{
+        right: 0;
+        right:100%;
+    }
+}
+
+.left{
+    animation: left 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes left{
+    0%{
+        bottom: -100%;
+        left: 0;
+    }
+    50%{
+        bottom: 100%;
+        left: 0%;
+    }
+    100%{
+        left:0;
+        bottom:100%;
+    }
+}
