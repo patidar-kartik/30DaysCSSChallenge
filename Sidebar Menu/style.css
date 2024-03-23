@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+.main-continer{
+    background-image: url(images/side.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+input{
+    display: none;
+}
+
+label i{
+    color: #fff;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 1.4rem;
+    margin: 10px;
+}
+
+.box{
+    height: 100vh;
+    width: 250px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
+    transition: 0.8s;
+    position: absolute;
+    top: 0;
+}
+
+.box ul li{
+    margin-top: 6px;
+    padding: 14px 20px;
+    transition: all 0.2s linear;
+    color: #fff;
+}
+
+.head{
+    font-size: 2rem;
+    color: #fff;
+    margin:0 10px;
+}
+.head label i{
+    font-size: 2rem;
+    margin-left: 20px;
+    color: black;
+}
+
+.box ul li{
+    margin-top: 6px;
+    padding: 14px 20px;
+}
+
+.box ul li a{
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.box ul li a i{
+    color: #fff;
+    font-size: 20px;
+    padding-right: 8px;
+}
+
+input:checked ~ .box
+{
+    margin-left: -260px;
+    transition: 0.8s;
+}
+
+input:not(:checked) ~ label{
+    opacity: 0;
+}
+
+input:checked + label{
+    opacity: 1;
+    transition: 1.5s;
+}
+
+ul li:hover{
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
+}
