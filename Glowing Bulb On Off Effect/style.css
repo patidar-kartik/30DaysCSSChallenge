@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.img-box{
+    height: 450px;
+    width: 450px;
+    position: relative;
+    top: -70px;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+label{
+    position: absolute;
+    height: 50px;
+    width: 180px;
+    left: 50%;
+    bottom: -20%;
+    font-size: 20px;    
+    transform: translateX(-50%);
+    color: black;
+    background-color: white;
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+#turn-off{
+    opacity: 0;
+    color: white;
+}
+#turn-off{
+    color: black;
+    background-color: #fff;
+}
+
+#turn-on{
+    background-color: #fff;
+}
+
+.img-box img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.on-img{
+    opacity: 0;
+}
+
+input:checked ~ .on-img{
+    opacity: 1;
+    animation-name: on;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+input:checked ~ #turn-off{
+    opacity: 1;
+}
+
+input:checked ~ #turn-on{
+    opacity: 0;
+}
+
+@keyframes on{
+    0%{
+        opacity: 1;
+    }
+    10%{
+        opacity: 1;
+    }
+    20%{
+        opacity: 1;
+    }
+    30%{
+        opacity: 1;
+    }
+    40%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    60%{
+        opacity: 0;
+    }
+    70%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media(max-width:450px){
+    .img-box{
+        height: 300px;
+        width: 300px;
+        top: -65%;
+       
+    }
+}
